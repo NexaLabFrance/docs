@@ -1,0 +1,9 @@
+{
+  "label": "Reseller API",
+  "position": 2,
+  "collapsed": false,
+  "link": {
+    "type": "doc",
+    "id": "reseller-api-index"
+  }
+}

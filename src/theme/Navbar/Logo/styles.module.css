@@ -1,0 +1,67 @@
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  transition: opacity 0.15s ease;
+}
+
+.brand:hover {
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+.logo {
+  height: 2.75rem;
+  width: 2.75rem;
+  border-radius: 0.75rem;
+  object-fit: contain;
+  -webkit-font-smoothing: antialiased;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  font-family: var(--nx-font-heading);
+  font-size: 1.5rem;
+  line-height: 1;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  color: var(--nx-foreground);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.subtitle {
+  display: block;
+  margin-top: 0.25rem;
+  font-family: var(--nx-font-body);
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--nx-muted-foreground);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (max-width: 500px) {
+  .title {
+    font-size: 1.25rem;
+  }
+
+  .subtitle {
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+  }
+
+  .logo {
+    height: 2.25rem;
+    width: 2.25rem;
+  }
+}

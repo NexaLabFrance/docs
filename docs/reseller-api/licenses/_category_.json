@@ -1,0 +1,11 @@
+{
+  "label": "Managing licenses",
+  "position": 3,
+  "collapsed": false,
+  "link": {
+    "type": "generated-index",
+    "title": "Managing licenses",
+    "slug": "/reseller-api/licenses",
+    "description": "Create, edit, suspend and delete licenses programmatically."
+  }
+}

@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://docs.nexalab.fr/sitemap.xml
+Sitemap: https://docs.nexalab.fr/fr/sitemap.xml

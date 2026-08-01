@@ -1,0 +1,26 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.docsSidebar.category.Reseller API": {
+    "message": "API Revendeur",
+    "description": "The label for category 'Reseller API' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.FiveM script": {
+    "message": "Script FiveM",
+    "description": "The label for category 'FiveM script' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Managing licenses": {
+    "message": "Gestion des licences",
+    "description": "The label for category 'Managing licenses' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Managing licenses.link.generated-index.title": {
+    "message": "Gestion des licences",
+    "description": "The generated-index page title for category 'Managing licenses' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Managing licenses.link.generated-index.description": {
+    "message": "Créer, modifier, suspendre et supprimer des licences par programmation.",
+    "description": "The generated-index page description for category 'Managing licenses' in sidebar 'docsSidebar'"
+  }
+}
