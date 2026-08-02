@@ -14,13 +14,14 @@ const config = {
 
   url: 'https://docs.nexalab.fr',
   baseUrl: '/',
+  organizationName: 'NexaLabFrance',
+  projectName: 'docs',
+  deploymentBranch: 'gh-pages',
+  trailingSlash: false,
 
   storage: {
     namespace: 'nexalab-docs',
   },
-
-  organizationName: 'NexaLabFrance',
-  projectName: 'docs',
 
   onBrokenLinks: 'throw',
 
