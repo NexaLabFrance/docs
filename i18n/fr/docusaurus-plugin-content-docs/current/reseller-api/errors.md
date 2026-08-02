@@ -2,7 +2,6 @@
 id: errors
 title: Erreurs
 sidebar_label: Erreurs
-sidebar_position: 4
 ---
 
 # Erreurs
