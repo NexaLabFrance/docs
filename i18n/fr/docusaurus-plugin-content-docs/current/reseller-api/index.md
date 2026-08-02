@@ -2,7 +2,6 @@
 id: reseller-api-index
 title: API Revendeur
 sidebar_label: Vue d'ensemble
-sidebar_position: 1
 ---
 
 # API Revendeur

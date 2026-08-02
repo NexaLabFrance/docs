@@ -2,7 +2,6 @@
 id: edit
 title: Edit a license
 sidebar_label: Edit
-sidebar_position: 3
 ---
 
 # Edit a license

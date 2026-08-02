@@ -2,7 +2,6 @@
 id: edit
 title: Modifier une licence
 sidebar_label: Modifier
-sidebar_position: 3
 ---
 
 # Modifier une licence
