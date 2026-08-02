@@ -30,16 +30,16 @@ const sidebars = {
     {
       type: 'category',
       label: 'Reseller API',
-      collapsible: false,
-      collapsed: false,
+      collapsible: true,
+      collapsed: true,
       link: {type: 'doc', id: 'reseller-api/reseller-api-index'},
       items: [
         'reseller-api/authentication',
         {
           type: 'category',
           label: 'Managing licenses',
-          collapsible: false,
-          collapsed: false,
+          collapsible: true,
+          collapsed: true,
           link: {
             type: 'generated-index',
             title: 'Managing licenses',
