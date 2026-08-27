@@ -285,6 +285,15 @@ h6,
   border-right: 1px solid var(--ifm-toc-border-color) !important;
 }
 
+/* Hide the "Collapse sidebar" button at the bottom of the docs sidebar.
+   Must live in the docusaurus.infima layer: layered !important beats
+   unlayered !important, and Infima sets display:block !important on it. */
+@layer docusaurus.infima {
+  aside [class*='collapseSidebarButton'] {
+    display: none !important;
+  }
+}
+
 .menu {
   padding: 1rem 0.75rem !important;
   font-size: 0.9rem;
