@@ -2,7 +2,6 @@
 id: delete
 title: Delete a license
 sidebar_label: Delete
-sidebar_position: 5
 ---
 
 # Delete a license

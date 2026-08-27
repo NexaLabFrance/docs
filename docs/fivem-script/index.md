@@ -2,7 +2,6 @@
 id: fivem-script-index
 title: FiveM script
 sidebar_label: Overview
-sidebar_position: 1
 ---
 
 # FiveM script

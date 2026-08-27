@@ -1,0 +1,40 @@
+---
+id: intro
+title: Documentation NexaLab
+sidebar_label: Introduction
+slug: /
+hide_table_of_contents: true
+---
+
+import {SectionCards, SectionCard} from '@site/src/components/SectionCards';
+
+# Documentation NexaLab
+
+Documentation technique pour les intégrations et scripts NexaLab. Choisissez une
+section pour commencer.
+
+<SectionCards>
+  <SectionCard
+    to="/fivem-script/"
+    eyebrow="Section"
+    title="FiveM"
+    meta="Pas encore publiée">
+    Installation et configuration des scripts NexaLab sur votre serveur FiveM.
+  </SectionCard>
+  <SectionCard
+    to="/reseller-api/"
+    eyebrow="Section"
+    title="NexaScript"
+    meta="API Revendeur · Gestion des licences · Erreurs">
+    Automatisez la gestion des licences depuis vos propres systèmes : créer une
+    clé lorsqu'une commande est payée, la suspendre après une rétrofacturation
+    ou la mettre à jour lorsqu'un abonnement change.
+  </SectionCard>
+</SectionCards>
+
+## Pages populaires
+
+- [Authentification](./reseller-api/authentication.md) — utiliser votre clé revendeur
+- [L'objet licence](./reseller-api/licenses/overview.md) — champs et états
+- [Créer une licence](./reseller-api/licenses/create.md) — émettre une clé après paiement
+- [Erreurs](./reseller-api/errors.md) — codes de statut et politique de réessai

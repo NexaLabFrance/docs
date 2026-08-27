@@ -2,7 +2,6 @@
 id: suspend
 title: Suspend a license
 sidebar_label: Suspend
-sidebar_position: 4
 ---
 
 # Suspend a license

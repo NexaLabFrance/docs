@@ -2,7 +2,6 @@
 id: create
 title: Create a license
 sidebar_label: Create
-sidebar_position: 2
 ---
 
 # Create a license

@@ -2,7 +2,6 @@
 id: reseller-api-index
 title: Reseller API
 sidebar_label: Overview
-sidebar_position: 1
 ---
 
 # Reseller API

@@ -2,7 +2,6 @@
 id: delete
 title: Supprimer une licence
 sidebar_label: Supprimer
-sidebar_position: 5
 ---
 
 # Supprimer une licence

@@ -2,7 +2,6 @@
 id: authentication
 title: Authentification
 sidebar_label: Authentification
-sidebar_position: 2
 ---
 
 # Authentification

@@ -2,7 +2,6 @@
 id: overview
 title: The license object
 sidebar_label: The license object
-sidebar_position: 1
 ---
 
 # The license object

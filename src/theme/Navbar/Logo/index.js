@@ -5,7 +5,7 @@ import styles from './styles.module.css';
 export default function NavbarLogo() {
   return (
     <a
-      href="https://nexalab.fr"
+      href="https://docs.nexalab.fr"
       className={styles.brand}
       aria-label="NexaLab">
       <img

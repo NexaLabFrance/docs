@@ -7,10 +7,6 @@
     "message": "API Revendeur",
     "description": "The label for category 'Reseller API' in sidebar 'docsSidebar'"
   },
-  "sidebar.docsSidebar.category.FiveM script": {
-    "message": "Script FiveM",
-    "description": "The label for category 'FiveM script' in sidebar 'docsSidebar'"
-  },
   "sidebar.docsSidebar.category.Managing licenses": {
     "message": "Gestion des licences",
     "description": "The label for category 'Managing licenses' in sidebar 'docsSidebar'"
