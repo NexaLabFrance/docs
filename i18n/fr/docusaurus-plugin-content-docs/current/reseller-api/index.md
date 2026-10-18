@@ -15,6 +15,8 @@ après une rétrofacturation ou un signalement d'abus.
 
 | Opération | Point d'accès |
 | --- | --- |
+| [**Lister les scripts**](./scripts.md) de votre compte | `GET /api/reseller/scripts` (alias : `GET /api/reseller/license-scripts`) |
+| [**Lister les licences**](./licenses/list.md) de vos scripts | `GET /api/reseller/licenses` |
 | [**Créer**](./licenses/create.md) une licence | `POST /api/reseller/licenses` |
 | [**Modifier**](./licenses/edit.md) une licence | `PATCH /api/reseller/licenses/:key` |
 | [**Suspendre**](./licenses/suspend.md) ou réactiver une licence | `POST /api/reseller/licenses/:key/revoke` |
@@ -30,9 +32,10 @@ https://api.nexalab.fr
 
 - Les requêtes et réponses sont en JSON (`Content-Type: application/json`).
 - Chaque requête transporte votre clé revendeur — voir [Authentification](./authentication.md).
-- Les réponses en succès contiennent toujours `"ok": true`.
-- Les échecs renvoient un code `error` stable et exploitable par machine, ainsi
-  qu'un `message` lisible. Testez `error`, affichez `message`.
+- Les opérations d'écriture réussies contiennent `"ok": true`. Les points d'accès
+  de liste renvoient `{ "scripts": { ... } }` ou `{ "licenses": { ... } }` sans champ `ok`.
+- Les échecs renvoient un code `error` stable et exploitable par machine, et
+  peuvent inclure un `message` lisible. Testez `error`, affichez `message` s'il est présent.
 
 ## Démarrage rapide
 

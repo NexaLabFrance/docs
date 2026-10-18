@@ -6,8 +6,11 @@ sidebar_label: L'objet licence
 
 # L'objet licence
 
-Chaque opération de cette section renvoie un objet licence. Voici à quoi il
-ressemble et ce que chaque champ signifie pour vous.
+Les points d'accès de création et de modification renvoient un objet licence
+dans `license`. Le [point d'accès de liste](./list.md) renvoie ces objets dans
+`licenses`, indexés par clé de licence. La suspension et la suppression renvoient
+une confirmation contenant la clé. Voici les principaux champs d'une licence
+et leur signification.
 
 ```json
 {

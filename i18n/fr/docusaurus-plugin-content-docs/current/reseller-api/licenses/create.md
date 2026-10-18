@@ -25,6 +25,8 @@ brancher sur votre webhook « paiement confirmé ».
 | `prefix` | string | non | `"LIC"` | Préfixe de la clé générée, par ex. `NXG-…`. |
 
 La clé est toujours générée côté serveur — vous ne pouvez pas la fournir.
+Utilisez [Lister les scripts](../scripts.md) pour trouver les identifiants de
+scripts disponibles pour votre compte.
 
 ## Requête
 
@@ -108,6 +110,12 @@ requête/réponse serré si vous pouvez le mettre en file d'attente.
 | `400` | `missing_fields` | `scriptId` n'a pas été fourni. |
 | `403` | `forbidden` | Clé revendeur manquante, invalide ou compte désactivé. |
 | `404` | `script_not_found` | Script inconnu, ou qui ne vous appartient pas. |
+| `503` | `build_failed` | Le package de la licence n'a pas pu être généré. |
+| `503` | `obfuscation_failed` | L'obfuscation a échoué pendant la génération du package. |
+| `503` | `encrypted_packaging_unavailable` | Le packaging chiffré est indisponible. |
+
+La licence n'est enregistrée qu'après la génération réussie de son package. En
+cas d'échec de génération, vérifiez le script et contactez le support NexaLab.
 
 ## Idempotence
 

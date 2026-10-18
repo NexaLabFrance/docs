@@ -25,6 +25,7 @@ your "payment confirmed" webhook.
 | `prefix` | string | no | `"LIC"` | Prefix for the generated key, e.g. `NXG-…`. |
 
 The key itself is always generated server-side — you cannot supply one.
+Use [List scripts](../scripts.md) to find the script IDs available to your account.
 
 ## Request
 
@@ -106,6 +107,12 @@ inside a tight request/response cycle if you can queue it instead.
 | `400` | `missing_fields` | `scriptId` was not provided. |
 | `403` | `forbidden` | Missing, invalid or disabled reseller key. |
 | `404` | `script_not_found` | Unknown script, or it does not belong to you. |
+| `503` | `build_failed` | The license package could not be generated. |
+| `503` | `obfuscation_failed` | Obfuscation failed while generating the package. |
+| `503` | `encrypted_packaging_unavailable` | Encrypted packaging is unavailable. |
+
+The license is saved only after its package is generated successfully. For
+package-generation failures, check the script and contact NexaLab support.
 
 ## Idempotency
 

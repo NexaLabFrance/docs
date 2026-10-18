@@ -6,7 +6,7 @@ sidebar_label: Authentication
 
 # Authentication
 
-Every license endpoint is authenticated with a single header: your **reseller
+Every reseller endpoint is authenticated with a single header: your **reseller
 key**.
 
 ```http

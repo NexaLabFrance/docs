@@ -8,7 +8,8 @@ sidebar_label: Errors
 
 ## Response shape
 
-Failures return JSON with a stable `error` code and a human-readable `message`:
+Failures return JSON with a stable `error` code and may include a human-readable
+`message`:
 
 ```json
 {
@@ -28,6 +29,7 @@ Always branch on `error`. Treat `message` as display text — wording may change
 | `403 Forbidden` | Your reseller key is missing, invalid, or your account is disabled. |
 | `404 Not Found` | The license or script does not exist — **or does not belong to you**. |
 | `500 Internal Server Error` | Something went wrong on the server. |
+| `503 Service Unavailable` | The license package could not be generated. |
 
 ## Error codes
 
@@ -39,7 +41,9 @@ Always branch on `error`. Treat `message` as display text — wording may change
 | `missing_fields` | 400 | A required field is absent. | Supply `scriptId` when creating. |
 | `invalid_field` | 400 | A field has the wrong type or an invalid value. | `maxSlots` must be a non-negative number. |
 | `no_fields` | 400 | A `PATCH` contained no editable field. | Send `maxSlots`, `expiresAt`, or both. |
-| `build_failed` | 500 | The server could not complete the operation. | Retry once with backoff. |
+| `build_failed` | 503 | The license package could not be generated. | Check the script and contact NexaLab support. |
+| `obfuscation_failed` | 503 | Obfuscation failed while generating the package. | Check the script and contact NexaLab support. |
+| `encrypted_packaging_unavailable` | 503 | Encrypted packaging is unavailable. | Contact NexaLab support. |
 | `internal_error` | 500 | Unexpected server error. | Retry once with backoff. |
 
 :::note[404 is deliberate for licenses that aren't yours]
@@ -56,12 +60,16 @@ valid and still get `404`, check it belongs to one of *your* scripts.
 | `403` | No — the credential is wrong. |
 | `404` | No — the resource isn't there. |
 | `500` | Yes, once, with backoff. |
+| `503` | Check the script or contact support before retrying creation. |
 | Network timeout | See below. |
 
 **Timeouts on create are the one case to be careful with.** A timed-out
 `POST /api/reseller/licenses` may still have succeeded. Don't blindly retry —
 you'll issue two keys for one order. Record the order-to-key mapping as soon as
 you receive it, and reconcile before retrying.
+
+Use [List licenses](./licenses/list.md) to reconcile against your stored order
+ID in `note` before issuing another key.
 
 Suspend, edit and delete are all safe to retry: repeating them produces the same
 end state.

@@ -8,7 +8,8 @@ sidebar_label: Erreurs
 
 ## Format des réponses
 
-Les échecs renvoient du JSON avec un code `error` stable et un `message` lisible :
+Les échecs renvoient du JSON avec un code `error` stable et peuvent inclure un
+`message` lisible :
 
 ```json
 {
@@ -29,6 +30,7 @@ formulation peut changer.
 | `403 Forbidden` | Votre clé revendeur est manquante, invalide, ou votre compte est désactivé. |
 | `404 Not Found` | La licence ou le script n'existe pas — **ou ne vous appartient pas**. |
 | `500 Internal Server Error` | Une erreur est survenue côté serveur. |
+| `503 Service Unavailable` | Le package de la licence n'a pas pu être généré. |
 
 ## Codes d'erreur
 
@@ -40,7 +42,9 @@ formulation peut changer.
 | `missing_fields` | 400 | Un champ requis est absent. | Fournissez `scriptId` lors de la création. |
 | `invalid_field` | 400 | Un champ a un type ou une valeur invalide. | `maxSlots` doit être un nombre positif ou nul. |
 | `no_fields` | 400 | Un `PATCH` ne contenait aucun champ modifiable. | Envoyez `maxSlots`, `expiresAt`, ou les deux. |
-| `build_failed` | 500 | Le serveur n'a pas pu terminer l'opération. | Réessayez une fois avec un délai progressif. |
+| `build_failed` | 503 | Le package de la licence n'a pas pu être généré. | Vérifiez le script et contactez le support NexaLab. |
+| `obfuscation_failed` | 503 | L'obfuscation a échoué pendant la génération du package. | Vérifiez le script et contactez le support NexaLab. |
+| `encrypted_packaging_unavailable` | 503 | Le packaging chiffré est indisponible. | Contactez le support NexaLab. |
 | `internal_error` | 500 | Erreur serveur inattendue. | Réessayez une fois avec un délai progressif. |
 
 :::note[Le 404 est délibéré pour les licences qui ne sont pas les vôtres]
@@ -58,6 +62,7 @@ appartient bien à l'un de *vos* scripts.
 | `403` | Non — l'identifiant est incorrect. |
 | `404` | Non — la ressource n'existe pas. |
 | `500` | Oui, une fois, avec un délai progressif. |
+| `503` | Vérifiez le script ou contactez le support avant de réessayer la création. |
 | Délai d'attente réseau | Voir ci-dessous. |
 
 **Les délais d'attente lors d'une création sont le seul cas délicat.** Un
@@ -65,6 +70,9 @@ appartient bien à l'un de *vos* scripts.
 réessayez pas aveuglément — vous généreriez deux clés pour une seule commande.
 Enregistrez la correspondance commande/clé dès sa réception, et vérifiez avant
 de réessayer.
+
+Utilisez [Lister les licences](./licenses/list.md) pour retrouver votre numéro
+de commande dans `note` avant de générer une autre clé.
 
 Les opérations de suspension, modification et suppression peuvent toutes être
 réessayées sans risque : les répéter produit le même état final.

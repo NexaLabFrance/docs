@@ -6,7 +6,7 @@ sidebar_label: Authentification
 
 # Authentification
 
-Chaque point d'accès de licence est authentifié par un seul en-tête : votre
+Chaque point d'accès revendeur est authentifié par un seul en-tête : votre
 **clé revendeur**.
 
 ```http

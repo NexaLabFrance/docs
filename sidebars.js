@@ -35,6 +35,7 @@ const sidebars = {
       link: {type: 'doc', id: 'reseller-api/reseller-api-index'},
       items: [
         'reseller-api/authentication',
+        'reseller-api/scripts',
         {
           type: 'category',
           label: 'Managing licenses',
@@ -45,10 +46,11 @@ const sidebars = {
             title: 'Managing licenses',
             slug: '/reseller-api/licenses',
             description:
-              'Create, edit, suspend and delete licenses programmatically.',
+              'List, create, edit, suspend and delete licenses programmatically.',
           },
           items: [
             'reseller-api/licenses/overview',
+            'reseller-api/licenses/list',
             'reseller-api/licenses/create',
             'reseller-api/licenses/edit',
             'reseller-api/licenses/suspend',

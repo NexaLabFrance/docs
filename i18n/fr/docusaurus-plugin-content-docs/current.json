@@ -16,7 +16,7 @@
     "description": "The generated-index page title for category 'Managing licenses' in sidebar 'docsSidebar'"
   },
   "sidebar.docsSidebar.category.Managing licenses.link.generated-index.description": {
-    "message": "Créer, modifier, suspendre et supprimer des licences par programmation.",
+    "message": "Lister, créer, modifier, suspendre et supprimer des licences par programmation.",
     "description": "The generated-index page description for category 'Managing licenses' in sidebar 'docsSidebar'"
   }
 }

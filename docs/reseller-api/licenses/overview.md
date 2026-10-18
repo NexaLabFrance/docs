@@ -6,8 +6,10 @@ sidebar_label: The license object
 
 # The license object
 
-Every operation in this section returns a license object. This is what it looks
-like and what each field means for you.
+The create and edit endpoints return a license object in `license`.
+The [list endpoint](./list.md) returns these objects in `licenses`, keyed by
+license key. Suspend and delete return a confirmation containing the key.
+Here are the main license fields and what they mean for you.
 
 ```json
 {

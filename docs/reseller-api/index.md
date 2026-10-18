@@ -14,6 +14,8 @@ and suspend access after a chargeback or abuse report.
 
 | Operation | Endpoint |
 | --- | --- |
+| [**List scripts**](./scripts.md) owned by your account | `GET /api/reseller/scripts` (alias: `GET /api/reseller/license-scripts`) |
+| [**List licenses**](./licenses/list.md) for your scripts | `GET /api/reseller/licenses` |
 | [**Create**](./licenses/create.md) a license | `POST /api/reseller/licenses` |
 | [**Edit**](./licenses/edit.md) a license | `PATCH /api/reseller/licenses/:key` |
 | [**Suspend**](./licenses/suspend.md) or restore a license | `POST /api/reseller/licenses/:key/revoke` |
@@ -29,9 +31,10 @@ https://api.nexalab.fr
 
 - Requests and responses are JSON (`Content-Type: application/json`).
 - Every request carries your reseller key — see [Authentication](./authentication.md).
-- Successful responses always include `"ok": true`.
-- Failures return a stable machine-readable `error` code plus a human `message`.
-  Branch on `error`, display `message`.
+- Successful write operations include `"ok": true`. List endpoints return
+  `{ "scripts": { ... } }` or `{ "licenses": { ... } }` without an `ok` field.
+- Failures return a stable machine-readable `error` code and may include a human
+  `message`. Branch on `error`, display `message` when present.
 
 ## Quick start
 
